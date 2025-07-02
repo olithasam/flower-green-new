@@ -182,33 +182,7 @@ body h1, body h2, body h3, body h4, body h5, body h6 {
 /*********************************
 Header Start
 *********************************/
-.header-style-1 {
-	position: absolute;
-	left: 0;
-	width: 100%;
-	z-index: 99999;
-	border-bottom: 1px solid rgba(255,255,255,.20);
-}
-.header-style-1 .navbar {
-	padding: 0px;
-}
-.header-style-1 .navbar-brand {
-	padding: 19px 60px;
-	margin: 0px;
-	border-right: 1px solid rgba(255,255,255,.20);
-	margin-right: 30px;
-}
-.header-style-1 .navbar-expand-lg .navbar-nav .nav-link {
-	font-size: 20px;
-	color: #fff;
-	font-family: 'Roboto Slab', serif;
-	font-weight: 400;
-	padding: 35px 15px;
-}
-.header-style-1 .navbar-nav {
-	width: 55%;
-	margin: auto;
-}
+
 .topside-menu {
 	margin: 0 50px 0 0;
 	padding: 0px;
@@ -271,6 +245,20 @@ a.con {
 	top: 0;
 	left: 100%;
 	background: #f6f6f6;
+
+
+}
+
+/* Make desktop navbar black */
+.header-style-2 .navbar-brand {
+    background-color: black !important;
+}
+
+.header-style-2 .navbar {
+    background-color: black !important;
+    background: black !important;
+    border-color: transparent !important;
+    box-shadow: white !important;
 }
 .header-style-2 .dropdown-menu a, .header-style-1 .dropdown-menu a {
 	color: #333;

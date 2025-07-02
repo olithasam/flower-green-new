@@ -18,104 +18,72 @@
       <link href="css/all.min.css" rel="stylesheet">
       <!-- CSS FILES End -->
    </head>
+   <script>
+// Wait for full page load
+window.addEventListener('DOMContentLoaded', function() {
+    // Get all counters
+    const counters = document.querySelectorAll('.counter-count');
+    
+    // Animation function
+    function animateCounter(counter) {
+        const target = +counter.getAttribute('data-count');
+        const duration = 2000; // 2 seconds
+        const start = 0;
+        const increment = target / (duration / 16); // 60fps
+        
+        let current = start;
+        const updateCounter = () => {
+            current += increment;
+            if (current < target) {
+                counter.textContent = Math.floor(current);
+                requestAnimationFrame(updateCounter);
+            } else {
+                counter.textContent = target;
+                // Add + for non-percentage counters
+                if (target !== 100) counter.textContent += '+';
+                if (target === 100) counter.textContent += '%';
+            }
+        };
+        
+        updateCounter();
+    }
+
+    // Start all counters
+    counters.forEach(counter => {
+        animateCounter(counter);
+    });
+});
+</script>
    <body>
       <div class="wrapper home2">
          <!--Header Start-->
          <header class="header-style-2">
             <nav class="navbar navbar-expand-lg">
-               <a class="navbar-brand" href="index-2.html"><img src="images/h2logo.png" alt=""></a>
+               <a class="navbar-brand" href="index-2.html"><img src="images/flowergreenlogo.png" alt=""></a>
                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"> <i class="fas fa-bars"></i> </button>
                <div class="collapse navbar-collapse" id="navbarSupportedContent">
                   <ul class="navbar-nav mr-auto">
                      <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="index-2.html"  role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> Home </a>
-                        <ul class="dropdown-menu" >
-                           <li><a href="index-2.html">Home One</a></li>
-                           <li><a href="home-two.html">Home Two</a></li>
-                           <li><a href="home-three.html">Home Three</a></li>
-                        </ul>
+                        <a class="nav-link dropdown-toggle" href="index.html"  role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> Home </a>
+                        
                      </li>
-                     <li class="nav-item"> <a class="nav-link" href="about.html">About</a> </li>
+                     
                      <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="events-grid.html"  role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> Events </a>
-                        <ul class="dropdown-menu" >
-                           <li><a href="events-grid.html">Events Grid</a></li>
-                           <li><a href="events-grid-2.html">Events Grid Two</a></li>
-                           <li><a href="events-grid-3.html">Events Grid Three</a></li>
-                           <li><a href="events-list.html">Events List</a></li>
-                           <li><a href="events-list-two.html">Events List Two</a></li>
-                           <li><a href="event-details.html">Event Details</a></li>
-                        </ul>
+                        <a class="nav-link dropdown-toggle" href="causes.html"  role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> Products </a>
+                        
                      </li>
                      <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="causes.html"  role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> Causes </a>
-                        <ul class="dropdown-menu" >
-                           <li><a href="causes.html">Causes Grid</a></li>
-                           <li><a href="causes-list.html">Causes List</a></li>
-                           <li><a href="causes-details.html">Causes Details</a> </li>
-                        </ul>
+                        <a class="nav-link dropdown-toggle" href="blog.html"  role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> About Us </a>
+                        
                      </li>
                      <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="blog.html"  role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> Blogs </a>
-                        <ul class="dropdown-menu" >
-                           <li><a href="blog.html">Blog Default</a></li>
-                           <li><a href="blog-list.html">Blog List</a> </li>
-                           <li><a href="blog-grid.html">Blog Grid</a></li>
-                           <li><a href="blog-two-col.html">Blog Two Columns</a> </li>
-                           <li><a href="blog-three-col.html">Blog Three Columns</a></li>
-                           <li><a href="blog-details.html">Blog Details</a></li>
-                        </ul>
-                     </li>
-                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#"  role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> Pages </a>
-                        <ul class="dropdown-menu" >
-                           <li>
-                              <a href="#">Projects</a>
-                              <ul class="dropdown-menu" >
-                                 <li><a href="projects.html">Projects</a> </li>
-                                 <li><a href="projects-grid.html">Projects Grid</a> </li>
-                                 <li><a href="projects-grid-two.html">Projects Grid Two</a> </li>
-                                 <li><a href="projects-list.html">Projects List</a> </li>
-                                 <li><a href="projects-details.html">Project Details</a> </li>
-                              </ul>
-                           </li>
-                           <li>
-                              <a href="#">Shop</a>
-                              <ul class="dropdown-menu" >
-                                 <li><a href="shop.html">Shop</a> </li>
-                                 <li><a href="shop-two.html">Shop Two</a> </li>
-                                 <li><a href="shop-details.html">Shop Details</a> </li>
-                              </ul>
-                           </li>
-                           <li>
-                              <a href="team.html">Team</a>
-                              <ul class="dropdown-menu" >
-                                 <li><a href="team.html">Team One</a> </li>
-                                 <li><a href="team-two.html">Team Two</a> </li>
-                                 <li><a href="team-details.html">Team Details</a> </li>
-                              </ul>
-                           </li>
-                           <li>
-                              <a href="#">Gallery</a>
-                              <ul class="dropdown-menu" >
-                                 <li><a href="gallery-grid.html">Gallery Grid</a> </li>
-                                 <li><a href="gallery-full.html">Gallery Full</a> </li>
-                                 <li><a href="gallery-masonry.html">Gallery Masonry</a> </li>
-                              </ul>
-                           </li>
-                           <li><a href="testimonials.html">Testimonials</a> </li>
-                           <li><a href="donation.html">Donation</a> </li>
-                           <li><a href="my-account.html">My Account</a> </li>
-                           <li><a href="coming-soon.html">Coming Soon</a> </li>
-                           <li><a href="page-404.html">404 Error</a> </li>
-                        </ul>
+                        <a class="nav-link dropdown-toggle" href="#"  role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> FAQ </a>
+                        
+                           
                      </li>
                      <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="contact.html"  role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> Contact </a>
-                        <ul class="dropdown-menu" >
-                           <li><a href="contact-one.html">Contact One</a> </li>
-                           <li><a href="contact-two.html">Contact Two</a> </li>
-                        </ul>
+                        
                      </li>
                   </ul>
                   <ul class="topnav-right">
@@ -154,40 +122,40 @@
          <!--Header End--> 
          <!--Slider Start-->
          <section id="home-slider" class="owl-carousel owl-theme wf100">
-            <div class="item">
-               <div class="slider-caption h2slider">
-                  <div class="container">
-                     <strong>Ecova<span> is the Best</span></strong>
-                     <h1>Eco Friendly</h1>
-                     <p>Nonprofit WordPress Theme</p>
-                     <a href="#" class="active">Find Out More</a> <a href="#">Join us Now</a> 
-                  </div>
-               </div>
-               <img src="images/h2-slide1.jpg" alt=""> 
+    <div class="item">
+        <div class="slider-caption h2slider">
+            <div class="container">
+                <strong>Flower Green<span> is the Best</span></strong>
+                <h1>Growing Media</h1>
+                <p>Premium Coco Peat & Coir Products from Sri Lanka</p>
+                <a href="#" class="active">Learn More</a>  
             </div>
-            <div class="item">
-               <div class="slider-caption h2slider">
-                  <div class="container">
-                     <strong><span>Please</span> Stop Hunting & </strong>
-                     <h1>Save WildLife</h1>
-                     <p>of <strong>endangered animals</strong> in the world</p>
-                     <a href="#" class="active">Find Out More</a> <a href="#">Join us Now</a> 
-                  </div>
-               </div>
-               <img src="images/h2-slide1.jpg" alt=""> 
+        </div>
+        <img src="images/h2-slide1.jpg" alt=""> 
+    </div>
+    <div class="item">
+        <div class="slider-caption h2slider">
+            <div class="container">
+                <strong><span>Natural & Organic</span> Coconut Coir </strong>
+                <h1>Sustainable Solution</h1>
+                <p>Made from <strong>the finest Sri Lankan coconut husks</strong></p>
+                <a href="#" class="active">Our Products</a> 
             </div>
-            <div class="item">
-               <div class="slider-caption h2slider">
-                  <div class="container">
-                     <strong>Save <span> & don’t waste our life</span> partner</strong>
-                     <h1>Water Resource</h1>
-                     <p>Before <strong>it’s too late</strong> for us...</p>
-                     <a href="#" class="active">Find Out More</a>  
-                  </div>
-               </div>
-               <img src="images/h2-slide1.jpg" alt=""> 
+        </div>
+        <img src="images/h2-slide1.jpg" alt=""> 
+    </div>
+    <div class="item">
+        <div class="slider-caption h2slider">
+            <div class="container">
+                <strong>Tailored <span> to your exact </span> specifications</strong>
+                <h1>Custom Solutions</h1>
+                <p>Premium quality at <strong>competitive prices</strong></p>
+                <a href="#" class="active">Contact Us</a>  
             </div>
-         </section>
+        </div>
+        <img src="images/h2-slide1.jpg" alt=""> 
+    </div>
+</section>
          <!--Slider End--> 
          <!--Service Area Start-->  
 <section class="services-area wf100">  
@@ -195,35 +163,35 @@
       <ul>  
          <li>  
             <div class="sinfo">  
-               <img src="images/sericon1.png" alt="">  
+               <img src="images/shop/competitive.png" alt="">  
                <h6>Competitive Pricing</h6>  
                <p>Lowest rates from Sri Lanka’s top source.</p>  
             </div>  
          </li>  
          <li>  
             <div class="sinfo">  
-               <img src="images/sericon2.png" alt="">  
+               <img src="images/shop/problem-solving.png" alt="">  
                <h6>Custom Solutions</h6>  
                <p>Blends tailored to your crop needs.</p>  
             </div>  
          </li>  
          <li>  
             <div class="sinfo">  
-               <img src="images/sericon3.png" alt="">  
+               <img src="images/shop/badge.png" alt="">  
                <h6>Premium Quality</h6>  
                <p>100% organic, high-performance coir.</p>  
             </div>  
          </li>  
          <li class="active">  
             <div class="sinfo">  
-               <img src="images/sericon4.png" alt="">  
+               <img src="images/shop/fast-delivery.png" alt="">  
                <h6>Fast Shipping</h6>  
                <p>Reliable global delivery.</p>  
             </div>  
          </li>  
          <li>  
             <div class="sinfo">  
-               <img src="images/sericon5.png" alt="">  
+               <img src="images/shop/improvement.png" alt="">  
                <h6>Always Improving</h6>  
                <p>Innovating better growing media.</p>  
             </div>  
@@ -246,42 +214,43 @@
                         
                         <p>Flower Green is your one-stop Growing Media provider from Sri Lanka. We provide exactly what you need, tailored to your specifications, at the best price! We specialize in all-natural organic Coco Peat and Coir Products, extracted from coconut husks. Our products are made from the finest Sri Lankan coir, recognized as the world's best source for coir and coco peat.
 
-We understand your needs better than any other industry supplier, offering premium quality coir and coco peat products at competitive prices. Our specialized product range is designed to meet your exact growing requirements.</p>
+                        <br><br>We understand your needs better than any other industry supplier, offering premium quality coir and coco peat products at competitive prices. Our specialized product range is designed to meet your exact growing requirements.</p>
                         <a class="aboutus" href="#">More About us</a> 
                      </div>
                   </div>
                </div>
             </div>
             <div class="home-facts counter pt80">
-               <div class="container">
-                  <div class="row">
-                     <div class="col-lg-3 col-sm-6 col-md-3">
-                        <div class="counter-box">
-                           <p class="counter-count">89000</p>
-                           <p class="ctxt">Trees Planted</p>
-                        </div>
-                     </div>
-                     <div class="col-lg-3 col-sm-6 col-md-3">
-                        <div class="counter-box">
-                           <p class="counter-count">79000</p>
-                           <p class="ctxt">Solar Panels in 2017</p>
-                        </div>
-                     </div>
-                     <div class="col-lg-3 col-sm-6 col-md-3">
-                        <div class="counter-box">
-                           <p class="counter-count">69000</p>
-                           <p class="ctxt">Wildlife Saved</p>
-                        </div>
-                     </div>
-                     <div class="col-lg-3 col-sm-6 col-md-3">
-                        <div class="counter-box">
-                           <p class="counter-count">59000</p>
-                           <p class="ctxt">Served Water Gallons</p>
-                        </div>
-                     </div>
-                  </div>
-               </div>
+   <div class="home-facts counter pt80">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-3 col-sm-6 col-md-3">
+                <div class="counter-box">
+                    <p class="counter-count" data-count="7500">0</p>
+                    <p class="ctxt">Happy Customers</p>
+                </div>
             </div>
+            <div class="col-lg-3 col-sm-6 col-md-3">
+                <div class="counter-box">
+                    <p class="counter-count" data-count="30000">0</p>
+                    <p class="ctxt">Tons Produced Annually</p>
+                </div>
+            </div>
+            <div class="col-lg-3 col-sm-6 col-md-3">
+                <div class="counter-box">
+                    <p class="counter-count" data-count="1000">0</p>
+                    <p class="ctxt">Natural Coconut Coir</p>
+                </div>
+            </div>
+            <div class="col-lg-3 col-sm-6 col-md-3">
+                <div class="counter-box">
+                    <p class="counter-count" data-count="650">0</p>
+                    <p class="ctxt">Countries Served</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
          </section>
          <!--About Section End--> 
          <!--Urgent Causes Start-->

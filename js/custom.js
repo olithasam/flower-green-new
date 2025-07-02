@@ -15,6 +15,7 @@ jQuery(document).ready(function($) {
     }
     // ------- Home Slider End ------- //
 	
+
 	
 	// ------- Pic Slider ------- //
     if ($('#pic-slider').length) {

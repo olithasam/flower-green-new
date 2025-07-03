@@ -8,7 +8,7 @@
       <meta name="description" content="">
       <meta name="author" content="">
       <link rel="icon" href="images/favicon.png">
-      <title>ECO HTML</title>
+      <title>Contact FlowerGren</title>
       <!-- CSS FILES START -->
       <link href="css/custom.css" rel="stylesheet">
       <link href="css/color.css" rel="stylesheet">
@@ -42,7 +42,7 @@
                         </ul>
                      </li>
                      <li class="nav-item"> <a class="nav-link" href="about.html">About</a> </li>
-                     <li class="nav-item"> <a class="nav-link" href="about.html">FAQ</a> </li>
+                     <li class="nav-item"> <a class="nav-link" href="faq.html">FAQ</a> </li>
                      <li class="nav-item"> <a class="nav-link" href="contact-one.html">Contact Us</a> </li>
                   </ul>                  
          </header>
@@ -51,11 +51,7 @@
          <section class="wf100 p100 inner-header">
             <div class="container">
                <h1>Contact Us</h1>
-               <ul>
-                  <li><a href="#">Home</a></li>
-                  <li><a href="#"> Contact </a></li>
-                  <li><a href="#"> Contact One</a></li>
-               </ul>
+               
             </div>
          </section>
          <!--Inner Header End--> 
@@ -64,33 +60,44 @@
             <div class="container">
                <div class="row">
                   <div class="col-md-6">
+
                      <div class="contact-form">
-                        <h3>Feel Free to Contact us</h3>
-                        <ul class="cform">
-                           <li class="half pr-15">
-                              <input type="text" class="form-control" placeholder="Full Name">
-                           </li>
-                           <li class="half pl-15">
-                              <input type="text" class="form-control" placeholder="Email">
-                           </li>
-                           <li class="half pr-15">
-                              <input type="text" class="form-control" placeholder="Contact">
-                           </li>
-                           <li class="half pl-15">
-                              <input type="text" class="form-control" placeholder="Subject">
-                           </li>
-                           <li class="full">
-                              <textarea class="textarea-control" placeholder="Message"></textarea>
-                           </li>
-                           <li class="full">
-                              <input type="submit" value="Contact us" class="fsubmit">
-                           </li>
-                        </ul>
-                     </div>
+   <h3>Feel Free to Contact us</h3>
+   <form id="contact-form" action="https://formspree.io/f/mkgbkgpg" method="POST">
+      <ul class="cform">
+         <li class="half pr-15">
+            <input type="text" name="name" class="form-control" placeholder="Full Name" required>
+         </li>
+         <li class="half pl-15">
+            <input type="email" name="email" class="form-control" placeholder="Email" required>
+         </li>
+         <li class="half pr-15">
+            <input type="text" name="contact" class="form-control" placeholder="Contact">
+         </li>
+         <li class="half pl-15">
+            <input type="text" name="subject" class="form-control" placeholder="Subject">
+         </li>
+         <li class="full">
+            <textarea name="message" class="textarea-control" placeholder="Message" required></textarea>
+         </li>
+         <li class="full">
+            <input type="submit" value="Send Message" class="fsubmit">
+         </li>
+         <li class="full">
+            <p id="form-status" style="color: green; font-weight: bold; display: none;">Message sent successfully!</p>
+         </li>
+      </ul>
+   </form>
+</div>
+
+
+
+
                   </div>
+
                   <div class="col-md-6">
                      <div class="google-map">
-                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d11418.310112375979!2d-74.00986187433132!3d40.710981182716246!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c24fa5d33f083b%3A0xc80b8f06e177fe62!2sNew+York%2C+NY!5e0!3m2!1sen!2s!4v1540972202179"></iframe>
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3581.1845732676434!2d80.02221127500027!3d7.3159007926921396!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zN8KwMTgnNTcuMiJOIDgwwrAwMScyOS4yIkU!5e1!3m2!1sen!2slk!4v1750841182871!5m2!1sen!2slk"></iframe>
                      </div>
                   </div>
                </div>
@@ -130,103 +137,93 @@
             </div>
          </section>
          <!--Contact End--> 
-         <!--Footer Start-->
-         <footer class="footer">
-            <div class="footer-top wf100">
-               <div class="container">
-                  <div class="row">
-                     <div class="col-lg-3 col-md-6 col-sm-6">
-                        <!--Footer Widget Start-->
-                        <div class="footer-widget">
-                           <h4>About Ecova</h4>
-                           <p> If anything’s hot in today’s economy, it’s saving money, including a broad range of green businesses helping people save energy, water, and other resources. Definitely, you can go with this business as it is a nothing but the future. </p>
-                           <a href="#" class="lm">About us</a> 
-                        </div>
-                        <!--Footer Widget End--> 
-                     </div>
-                     <div class="col-lg-3 col-md-6 col-sm-6">
-                        <!--Footer Widget Start-->
-                        <div class="footer-widget">
-                           <h4>Our Promises</h4>
-                           <ul class="quick-links">
-                              <li><a href="#">Solar Energy</a></li>
-                              <li><a href="#">Waste Management</a></li>
-                              <li><a href="#">Eco Ideas</a></li>
-                              <li><a href="#">Recycling Materials</a></li>
-                              <li><a href="#">Plant Ecology</a></li>
-                              <li><a href="#">Saving Wildlife </a></li>
-                           </ul>
-                        </div>
-                        <!--Footer Widget End--> 
-                     </div>
-                     <div class="col-lg-3 col-md-6 col-sm-6">
-                        <!--Footer Widget Start-->
-                        <div class="footer-widget">
-                           <h4>Latest Posts</h4>
-                           <ul class="lastest-products">
-                              <li> <img src="images/flp1.jpg" alt=""> <strong><a href="#">How you can keep alive wild animals for...</a></strong> <span class="pdate"><i>Posted:</i> 29 September, 2018</span> </li>
-                              <li> <img src="images/flp2.jpg" alt=""> <strong><a href="#">Eliminate your plastic bottle pollution & keep...</a></strong> <span class="pdate"><i>Posted:</i> 29 September, 2018</span> </li>
-                              <li> <img src="images/flp3.jpg" alt=""> <strong><a href="#">How you can keep alive wild animals for...</a></strong> <span class="pdate"><i>Posted:</i> 29 September, 2018</span> </li>
-                           </ul>
-                        </div>
-                        <!--Footer Widget End--> 
-                     </div>
-                     <div class="col-lg-3 col-md-6 col-sm-6">
-                        <!--Footer Widget Start-->
-                        <div class="footer-widget">
-                           <div id="fpro-slider" class="owl-carousel owl-theme">
-                              <!--Footer Product Start-->
-                              <div class="item">
-                                 <div class="f-product">
-                                    <img src="images/fpro1.jpg" alt="">
-                                    <div class="fp-text">
-                                       <h6><a href="#">Buy T-Shirts</a></h6>
-                                       <strong>$19.00</strong> 
-                                    </div>
-                                 </div>
-                              </div>
-                              <!--Footer Product End--> 
-                              <!--Footer Product Start-->
-                              <div class="item">
-                                 <div class="f-product">
-                                    <img src="images/fpro1.jpg" alt="">
-                                    <div class="fp-text">
-                                       <h6><a href="#">Buy T-Shirts</a></h6>
-                                       <strong>$19.00</strong> 
-                                    </div>
-                                 </div>
-                              </div>
-                              <!--Footer Product End--> 
-                              <!--Footer Product Start-->
-                              <div class="item">
-                                 <div class="f-product">
-                                    <img src="images/fpro1.jpg" alt="">
-                                    <div class="fp-text">
-                                       <h6><a href="#">Buy T-Shirts</a></h6>
-                                       <strong>$19.00</strong> 
-                                    </div>
-                                 </div>
-                              </div>
-                              <!--Footer Product End--> 
-                           </div>
-                        </div>
-                        <!--Footer Widget End--> 
-                     </div>
-                  </div>
+         
+<!--Footer Start-->
+<footer class="footer">
+   <div class="footer-top wf100">
+      <div class="container">
+         <div class="row">
+            <div class="col-lg-3 col-md-6 col-sm-6">
+               <!--Footer Widget Start-->
+               <div class="footer-widget">
+                  <h4>About Flower Green</h4>
+                  <p>Flower Green is a leading Sri Lankan manufacturer and exporter of premium coco peat, coir products, and husk chips. We specialize in sustainable, eco-friendly growing media solutions for horticulture and agriculture worldwide.</p>
+                  <a href="about.html" class="lm">About us</a> 
                </div>
+               <!--Footer Widget End--> 
             </div>
-            <div class="footer-copyr wf100">
-               <div class="container">
-                  <div class="row">
-                     <div class="col-md-4 col-sm-4"> <img src="images/logo.png" alt=""> </div>
-                     <div class="col-md-8 col-sm-8">
-                        <p><a target="_blank" href="https://www.templateshub.net">Templates Hub</a></p>
-                     </div>
-                  </div>
+            <div class="col-lg-3 col-md-6 col-sm-6">
+               <!--Footer Widget Start-->
+               <div class="footer-widget">
+                  <h4>Our Products</h4>
+                  <ul class="quick-links">
+                     <li><a href="cocpeat.html">Coco Peat</a></li>
+                     <li><a href="coir.html">Coir Products</a></li>
+                     <li><a href="huskchips.html">Husk Chips</a></li>
+                     <li><a href="other.html">Other Products</a></li>
+                     <li><a href="#">Custom Solutions</a></li>
+                     <li><a href="#">Export Markets</a></li>
+                  </ul>
                </div>
+               <!--Footer Widget End--> 
             </div>
-         </footer>
-         <!--Footer End--> 
+            <div class="col-lg-3 col-md-6 col-sm-6">
+               <!--Footer Widget Start-->
+               <div class="footer-widget">
+                  <h4>Quick Navigation</h4>
+                  <ul class="quick-links">
+                     <li><a href="index.html">Home</a></li>
+                     <li><a href="about.html">About</a></li>
+                     <li><a href="products.html">Products</a></li>
+                     <li><a href="faq.html">FAQ</a></li>
+                     <li><a href="contact.html">Contact</a></li>
+                  </ul>
+               </div>
+               <!--Footer Widget End--> 
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm-6">
+               <!--Footer Widget Start-->
+               <div class="footer-widget contact-widget">
+                  <h4>Contact Us</h4>
+                  <address>
+                     <ul>
+                        <li>
+                           <i class="fas fa-map-marker-alt"></i>
+                           <span>Flower Green Headquarters<br>Colombo, Sri Lanka</span>
+                        </li>
+                        <li>
+                           <i class="fas fa-phone"></i>
+                           <span>+94 112 345 678</span>
+                        </li>
+                        <li>
+                           <i class="fas fa-envelope"></i>
+                           <span>info@flowergreen.com</span>
+                        </li>
+                        <li>
+                           <i class="fas fa-clock"></i>
+                           <span>Mon-Fri: 8:30am - 5:30pm<br>Sat: 9:00am - 1:00pm</span>
+                        </li>
+                     </ul>
+                  </address>
+               </div>
+               <!--Footer Widget End--> 
+            </div>
+         </div>
+      </div>
+   </div>
+   <div class="footer-copyr wf100">
+      <div class="container">
+         <div class="row">
+            <div class="col-md-12 col-sm-12"> 
+               <p>&copy; 2023 Flower Green. All Rights Reserved. | Designed by <strong>InntriLabs</strong></p>
+            </div>
+         </div>
+      </div>
+   </div>
+</footer>
+<!--Footer End-->
+
+
       </div>
       <!--   JS Files Start  --> 
       <script src="js/jquery-3.3.1.min.js"></script> 

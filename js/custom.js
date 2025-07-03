@@ -384,24 +384,7 @@ jQuery(document).ready(function($) {
 	}
 	
 	// ------- Search Overlay End ------- //
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
+
 	
 	// ------- Counter ------- //
 	if ($('.countdown').length) {
@@ -471,3 +454,37 @@ jQuery(document).ready(function($) {
 		}
 	});
 	// ------- Masonry End ------- //
+
+
+
+	const form = document.getElementById('contact-form');
+  const statusMessage = document.getElementById('form-status');
+
+  form.addEventListener('submit', async function (e) {
+    e.preventDefault(); // Stop default form submission
+
+    const formData = new FormData(form);
+    
+    try {
+      const response = await fetch(form.action, {
+        method: form.method,
+        body: formData,
+        headers: {
+          'Accept': 'application/json'
+        }
+      });
+
+      if (response.ok) {
+        statusMessage.style.display = 'block';
+        form.reset();
+      } else {
+        statusMessage.style.display = 'block';
+        statusMessage.style.color = 'red';
+        statusMessage.textContent = 'Oops! Something went wrong.';
+      }
+    } catch (error) {
+      statusMessage.style.display = 'block';
+      statusMessage.style.color = 'red';
+      statusMessage.textContent = 'Oops! Network error.';
+    }
+  });

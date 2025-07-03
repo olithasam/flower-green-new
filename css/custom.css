@@ -220,6 +220,82 @@ a.con {
 	border-bottom: 0;
 	border-left: 5px solid transparent;
 }
+/* Google Translate Widget Styling */
+.goog-te-gadget {
+  color: transparent !important;
+  font-size: 0 !important;
+}
+.goog-te-combo {
+  position: absolute;
+  opacity: 0;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+}
+.goog-te-banner-frame {
+  display: none !important;
+}
+.skiptranslate iframe {
+  display: none !important;
+}
+
+/* Custom Translator Styling */
+.flowergreen-translator {
+  position: relative;
+  display: inline-block;
+  margin-left: 20px;
+  font-family: 'Roboto Slab', serif;
+}
+.custom-translator {
+  display: flex;
+  align-items: center;
+  padding: 8px 15px;
+  background: rgba(255,255,255,0.1);
+  border: 1px solid rgba(255,255,255,0.2);
+  border-radius: 4px;
+  color: white;
+  cursor: pointer;
+}
+.custom-translator:hover {
+  background: rgba(255,255,255,0.2);
+}
+.custom-translator img {
+  width: 20px;
+  height: 15px;
+  margin-right: 8px;
+}
+.custom-translator i {
+  margin-left: 8px;
+  font-size: 12px;
+}
+
+/* Loading Indicator */
+#google-translate-loader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 9999;
+}
+.translate-loading-bar {
+  height: 3px;
+  width: 0;
+  background: #689f38;
+  transition: width 0.3s;
+}
+
+/* Mobile Responsive */
+@media (max-width: 991px) {
+  .flowergreen-translator {
+    margin: 15px 0;
+    width: 100%;
+  }
+  .custom-translator {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
 /*********************************
 Header End
 *********************************/

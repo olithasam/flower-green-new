@@ -1,90 +1,6 @@
 @charset "utf-8";
-/*------------------------------------------------------------------
-Project:		Ecova | Eco HTML Theme
-Version:		1.0
-AuthorName:		GramoTech
-Primary use:	Eco , Environmental, Charity, Eco Projects 
 
 
-[Color codes]
-Background:			#fff (White)
-Content:			#555555 (gray)
-Header:				#1b5e20 (Dark Green)
-Header 2:			#33691e (Medium Green)
-Footer:				#222222 (Dark Gray)
-Primary Color:		#66bb6a (Medium Green)
-Scendry Color:		#33691e (Light Green)
-
-
-[Typography]
-Body copy:			font:26px/16px 'Roboto', sans-serif;
-Headers:			font:40px/40px 'Poppins', serif;
-Input, textarea:	font:24px/16px 'Roboto', sans-serif;
-Sidebar heading:	font:28px/28px 'Poppins', serif;
-
-
-/------------------------------------------------------------ 
-
-[Table of contents]
-1. Theme Reset Style												=	00-00
-
-1. 	 Basic Styles													=	00-00
-2. 	 Header // header 												=	00-00
-2.1  Inner Header // .inner-header									=	00-00
-
-3. 	 Home Page	  //.wrapper										=	00-00
-3.1  Slider															=	00-00
-3.2  About Section													=	00-00			
-3.3  Services														=	00-00
-3.4  Post News														=	00-00
-3.5  Events Posts													=	00-00
-3.6  Fundraising Campaign											=	00-00
-3.7  Promises 														=	00-00		
-3.8  Filter Gallery													=	00-00
-3.9  Footer															=	00-00	
-
-4. 	 Home Page														=	00-00	
-4.1  Service Area													=	00-00
-4.2  About															=	00-00
-4.3  Urgent Causes													=	00-00	
-4.4  Current Projects												=	00-00
-4.5  News And Articles												=	00-00
-4.6  WHY Ecova														=	00-00
-4.7  Online Shop													=	00-00
-4.8  Footer Style 2													=	00-00
-																	=	00-00
-5.   Home Page 3													=	00-00	
-5.1  Donation + Become a Volunteer									=	00-00
-5.2  About Txt														=	00-00
-5.3  Core Projects													=	00-00
-5.4  Events															=	00-00
-5.5  Home 3 Footer													=	00-00	
-											
-6. Blog Pages														=	00-00
-7. Causes Pages														=	00-00	
-8. Projects Pages													=	00-00
-9. Event Thumbs 													=	00-00
-10. Event Listing													=	00-00
-11. Team Pages														=	00-00
-12. Contact Page													=	00-00
-13. Shop Pages														=	00-00
-14. Page 404														=	00-00
-15. Coming Soon 													=	00-00	
-16. My Account Page													=	00-00
-17. Testimonials Page												=	00-00
-18. Blog Details													=	00-00
-19. Single Donation													=	00-00
-20. Event Details													=	00-00	
-21. Team Details													=	00-00
-22. Donation Page													=	00-00
-23. About Us														=	00-00
-24. SideWidgets														=	00-00
-25. Search Overlay													=	00-00
-26. Sidebar Menu													=	00-00
-								
-[Updates]
-
--------------------------------------------------------------------*/
 
 /*********************************
 Fonts Start
@@ -182,7 +98,33 @@ body h1, body h2, body h3, body h4, body h5, body h6 {
 /*********************************
 Header Start
 *********************************/
-
+.header-style-1 {
+	position: absolute;
+	left: 0;
+	width: 100%;
+	z-index: 99999;
+	border-bottom: 1px solid rgba(255,255,255,.20);
+}
+.header-style-1 .navbar {
+	padding: 0px;
+}
+.header-style-1 .navbar-brand {
+	padding: 19px 60px;
+	margin: 0px;
+	border-right: 1px solid rgba(255,255,255,.20);
+	margin-right: 30px;
+}
+.header-style-1 .navbar-expand-lg .navbar-nav .nav-link {
+	font-size: 20px;
+	color: #fff;
+	font-family: 'Roboto Slab', serif;
+	font-weight: 400;
+	padding: 35px 15px;
+}
+.header-style-1 .navbar-nav {
+	width: 55%;
+	margin: auto;
+}
 .topside-menu {
 	margin: 0 50px 0 0;
 	padding: 0px;
@@ -245,20 +187,6 @@ a.con {
 	top: 0;
 	left: 100%;
 	background: #f6f6f6;
-
-
-}
-
-/* Make desktop navbar black */
-.header-style-2 .navbar-brand {
-    background-color: black !important;
-}
-
-.header-style-2 .navbar {
-    background-color: black !important;
-    background: black !important;
-    border-color: transparent !important;
-    box-shadow: white !important;
 }
 .header-style-2 .dropdown-menu a, .header-style-1 .dropdown-menu a {
 	color: #333;

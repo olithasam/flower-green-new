@@ -105,7 +105,15 @@ jQuery(document).ready(function($) {
 		}
 	}); //End
 
-
+//navigation bar scrolled
+window.addEventListener('scroll', function() {
+	const header = document.querySelector('.header-style-1');
+	if (window.scrollY > 50) {
+		header.classList.add('scrolled');
+	} else {
+		header.classList.remove('scrolled');
+	}
+});//end navbar
 	// ------- Home Slider Start ------- //
 	if ($('#fpro-slider').length) {
 		$('#fpro-slider').owlCarousel({
@@ -488,3 +496,5 @@ jQuery(document).ready(function($) {
       statusMessage.textContent = 'Oops! Network error.';
     }
   });
+
+  

@@ -221,7 +221,7 @@ ul.topnav-right {
 }
 .header-style-1 {
 	position: relative;
-	background: #33691e;
+	background: black
 }
 .header-style-1 .navbar-toggler {
 	color: #fff;
@@ -229,7 +229,7 @@ ul.topnav-right {
 	border: 1px solid #33691e;
 	margin: 0 20px 0 0;
 	padding: 8px 15px;
-	background: #66bb6a;
+	background: #3a7746;
 }
 .header-style-1 .navbar-nav {
 	width: 100%;
@@ -581,7 +581,7 @@ section.page404.wf100.p80 img {
 }
 .header-style-1 {
 	position: relative;
-	background: #33691e;
+	background: #000000;
 }
 .slider-caption {
 	top: 50px;
@@ -846,7 +846,7 @@ section.page404.wf100.p80 img {
 }
 .header-style-1 {
 	position: relative;
-	background: #33691e;
+	background: #000000;
 }
 .header-style-1 .navbar-brand {
 	padding: 20px;

@@ -99,11 +99,20 @@ body h1, body h2, body h3, body h4, body h5, body h6 {
 Header Start
 *********************************/
 .header-style-1 {
-	position: absolute;
-	left: 0;
-	width: 100%;
-	z-index: 99999;
-	border-bottom: 1px solid rgba(255,255,255,.20);
+    position: fixed; /* Makes the header stick to the top */
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 99999;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    background-color: transparent; /* Initially transparent */
+    transition: background-color 0.3s ease, box-shadow 0.3s ease; /* Smooth transition */
+}
+
+/* Black background when scrolled */
+.header-style-1.scrolled {
+    background-color: #000; /* Pure black background */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3); /* Optional: subtle shadow */
 }
 .header-style-1 .navbar {
 	padding: 0px;

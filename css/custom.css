@@ -1683,8 +1683,8 @@ section.services-area ul li.active:after {
 	top: 0;
 	width: 95px;
 	height: 124px;
-	background: #fff;
-	border: 2px solid #e6e6e6;
+	background: #e5f9e3;
+	border: 2px solid #ffffff;
 	content: "";
 }
 .counter-box p.counter-count {
